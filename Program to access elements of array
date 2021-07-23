@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int ar[10], i, n;
+	cout<<"Maximum size of array is 10"<<endl<<"Enter size of array:"; cin>>n; cout<<endl<<"Enter elements:";
+	for(i=0;i<n;i++)
+	{
+		cin>>ar[i];
+	}
+	cout<<"This is what you entered:"<<endl;
+	for(i=0;i<n;i++)
+	{
+		cout<<ar[i]<<endl;
+	}
+	return 0;
+}
