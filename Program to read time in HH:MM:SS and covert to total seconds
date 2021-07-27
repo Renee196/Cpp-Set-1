@@ -1,0 +1,45 @@
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+class time{
+	
+	private :
+		int seconds, hours, mins, secs;
+		
+	public:
+		convert_to_sec();
+		display_time();
+		time_input();
+		
+};
+
+time::convert_to_sec()
+{
+	seconds= (hours*3600) + (mins*60) + secs;
+}
+
+time::time_input()
+{
+	cout<<"Enter time:"<<endl<<"Hours?"; cin>>hours;
+	cout<<"\nMinutes?"; cin>>mins;
+	cout<<"\nSeconds?"; cin>>secs;
+}
+
+time::display_time()
+{
+	cout<<"\nThe time is = "<<setw(2)<<setfill('0')<<hours<<":"
+	                      <<setw(2)<<setfill('0')<<mins<<":"
+	                      <<setw(2)<<setfill('0')<<secs<<endl;
+	cout<<"\nTime in total seconds: "<<seconds;
+}
+
+int main()
+{
+	time t;
+	t.time_input();
+	t.convert_to_sec();
+	t.display_time();
+	return 0;
+}
